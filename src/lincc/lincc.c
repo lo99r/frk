@@ -198,7 +198,7 @@ void laxer(){
 		    *(buffers.bufferScanedToken + *token_count) = tokenClass(tempoB);
 		    *token_count++;
 		    op = 0;
-		    opc = 0
+		    opc = 0;
 		    break;
 	    }
 	}
@@ -261,7 +261,7 @@ void laxer(){
 		}
 		else if(op == 2){
 		    tempoB[opc] = bufferIn[count];
-		    tempoB[opc + 1] = bufferIn[count + 1]
+		    tempoB[opc + 1] = bufferIn[count + 1];
 		    count++;
 		}
 		else if(op == 3){
@@ -280,7 +280,7 @@ void laxer(){
                 }
                 else if(op == 2){
                     tempoB[opc] = bufferIn[count];
-                    tempoB[opc + 1] = bufferIn[count + 1]
+                    tempoB[opc + 1] = bufferIn[count + 1];
                     count++;
                 }
                 else if(op == 3){
@@ -299,7 +299,7 @@ void laxer(){
                 }
                 else if(op == 2){
                     tempoB[opc] = bufferIn[count];
-                    tempoB[opc + 1] = bufferIn[count + 1]
+                    tempoB[opc + 1] = bufferIn[count + 1];
                     count++;
                 }
                 else if(op == 3){
@@ -307,8 +307,29 @@ void laxer(){
                     break;
                 }
             }
+	    if(next == '\''){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+    opc++;
     count++;
     }
 }
 
 //todo: 일단 메인 함수 어쩌구 하고나서 리퍼지토리 독립
+//bcdedit -debug on
