@@ -239,8 +239,10 @@ void laxer(){
 	    else if(op == 2){
 		tempoB[opc] = bufferIn[count];
 		realloc(buffers.bufferScanedToken, sizeof(token_t) * *token_count);
-		*token_count++
-		*(buffers.bufferScanedToken + *token_count) = tokenClass(tempoB);
+		realloc(buffers.bufferIdent, sizeof(token_t) * *(buffers.buffsize + 2));
+		*(buffers.bufferTokenedToken + *(buffers.buffsize + 1)) = TOK_IDENT;
+		*(buffers.bufferIdent + *(buffers.buffsize + 2)) = indentExec(tempoB);
+		*(buffers.buffsize + 1)++;*(buffers.buffsize + 2);
 		op == 0;
 		opc = 0;
 	    }
@@ -326,6 +328,45 @@ void laxer(){
                     break;
                 }
             }
+	    if(next == '\"'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	    if(next == 'a'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	}
     opc++;
     count++;
     }
