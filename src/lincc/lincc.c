@@ -366,6 +366,105 @@ void laxer(){
                     break;
                 }
             }
+	    if(next == 'b'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	    if(next == 'f'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	    if(next == 'r'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	    if(next == 'v'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	    if(next == '?'){
+                if(op == 0){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else(op == 1){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+                else if(op == 2){
+                    tempoB[opc] = bufferIn[count];
+                    tempoB[opc + 1] = bufferIn[count + 1];
+                    count++;
+                }
+                else if(op == 3){
+                    addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
+                    break;
+                }
+            }
+	    if(next == '\n'){
+		addLine();
+		continue;
+	    }
 	}
     opc++;
     count++;
