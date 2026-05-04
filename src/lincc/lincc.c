@@ -271,7 +271,7 @@ void laxer(){
 		    break;
 		}
 	    }
-	    if(next == 't'){
+	    else if(next == 't'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -290,7 +290,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == '\\'){
+	    else if(next == '\\'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -309,7 +309,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == '\''){
+	    else if(next == '\''){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -328,7 +328,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == '\"'){
+	    else if(next == '\"'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -347,7 +347,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == 'a'){
+	    else if(next == 'a'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -366,7 +366,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == 'b'){
+	    else if(next == 'b'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -385,7 +385,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == 'f'){
+	    else if(next == 'f'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -404,7 +404,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == 'r'){
+	    else if(next == 'r'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -423,7 +423,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == 'v'){
+	    else if(next == 'v'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -442,7 +442,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == '?'){
+	    else if(next == '?'){
                 if(op == 0){
                     addLog(ERROR, *(buffers.buffsize + 1), _NO_OP_2_LN);
                     break;
@@ -461,7 +461,7 @@ void laxer(){
                     break;
                 }
             }
-	    if(next == '\n'){
+	    else if(next == '\n'){
 		addLine();
 		continue;
 	    }
